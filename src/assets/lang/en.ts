@@ -7,6 +7,8 @@ export const en = {
     home_title: 'Home',
     form_title: 'Form',
     table_title: 'Table',
+    login_title: 'Sign in',
+    logo:'Your logo',
 
     // errors
     input_required: 'This field is required',
