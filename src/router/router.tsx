@@ -11,7 +11,7 @@ const router = createBrowserRouter(
   [
     {
       element: (
-        <AuthProtectedComponent layout='public'>
+        <AuthProtectedComponent layout='auth'>
           <PublicComponent />
         </AuthProtectedComponent>
       ),
@@ -25,7 +25,7 @@ const router = createBrowserRouter(
     {
       path: Routes.auth,
       element: (
-        <AuthProtectedComponent layout='auth'>
+        <AuthProtectedComponent layout='public'>
           <AuthComponent />
         </AuthProtectedComponent>
       ),

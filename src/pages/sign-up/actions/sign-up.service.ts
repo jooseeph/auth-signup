@@ -1,9 +1,9 @@
 import { API } from 'core/configs/api.config';
 import axiosInstance from 'core/configs/axios.config';
-import { ILoginFormValues } from '../login';
+import { IRegisterFormValues } from '../sign-up';
 
-export const login = (
-  credentials: ILoginFormValues
+export const register = (
+  credentials: IRegisterFormValues
 ): Promise<{ token: string }> => {
   return axiosInstance
     .post(API.posts, credentials)

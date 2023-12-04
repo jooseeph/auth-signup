@@ -4,7 +4,7 @@ const HomeComponent = () => {
       <h1>Main </h1>
       <img
         style={{ width: '350px', height: '350px' }}
-        src='/src/assets/images/Saly-Lefr.svg'
+        src='/src/assets/images/Saly-Left.svg'
         alt=''
       />
       <img

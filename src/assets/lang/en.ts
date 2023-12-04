@@ -9,6 +9,7 @@ export const en = {
     table_title: 'Table',
     login_title: 'Sign in',
     logo:'Your logo',
+    welcome:'Welcome to Site',
 
     // errors
     input_required: 'This field is required',
