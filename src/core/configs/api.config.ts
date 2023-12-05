@@ -1,4 +1,4 @@
 export const API = {
-    posts: 'posts',
-  };
-  
+  post: 'users',
+  get: 'users',
+};

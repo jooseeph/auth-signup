@@ -28,7 +28,11 @@ const LoginComponent = () => {
 
   return (
     <>
-      <BackgroundComponent>
+      <BackgroundComponent
+        isLogoVis={true}
+        isLeftVecVis={true}
+        isRightVecVis={true}
+      >
         <div className={page}>
           <div>
             <div>
@@ -51,7 +55,7 @@ const LoginComponent = () => {
               >
                 <Input />
               </Form.Item>
-              <Form.Item name='password' label='Password'>
+              <Form.Item name='password' label='Enter your Password'>
                 <Input type='password' />
               </Form.Item>
               <Form.Item wrapperCol={{ offset: 13, span: 16 }}>

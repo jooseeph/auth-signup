@@ -36,7 +36,6 @@ export const rootSlice = createSlice({
       );
     },
     setUser: (state: IState, action: PayloadAction<any>) => {
-      // state.user = jwtDecode(action.payload);
       state.user = action.payload;
     },
   },

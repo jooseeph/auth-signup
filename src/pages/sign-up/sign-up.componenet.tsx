@@ -2,8 +2,8 @@ import BackgroundComponent from 'core/layouts/background/background';
 import { useSignupStyles } from './sign-up.style';
 import { IRegisterFormValues } from './sign-up';
 import { useRegister } from './actions/sign-up,mutation';
-import { Button, Form, Input } from 'antd';
-import { useCallback } from 'react';
+import { Button, Form, FormRule, Input } from 'antd';
+import { useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Routes } from 'router/routes';
 
@@ -24,8 +24,45 @@ const SignUpComponent = () => {
     },
     [mutate]
   );
+  const rules: { [key: string]: FormRule[] } = useMemo(
+    () => ({
+      email: [
+        {
+          required: true,
+          message: 'Iinput required',
+        },
+        {
+          pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+          message: 'Invalid email',
+        },
+      ],
+      password: [
+        {
+          required: true,
+          message: 'Password required',
+        },
+      ],
+      username: [
+        {
+          required: true,
+          message: 'Username required',
+        },
+      ],
+      contactNumber: [
+        {
+          required: true,
+          message: 'Contact Number required',
+        },
+      ],
+    }),
+    []
+  );
   return (
-    <BackgroundComponent>
+    <BackgroundComponent
+      isLogoVis={true}
+      isLeftVecVis={true}
+      isRightVecVis={true}
+    >
       {
         <div className={page}>
           <div>
@@ -51,6 +88,7 @@ const SignUpComponent = () => {
                 initialValues={initialValues}
               >
                 <Form.Item
+                  rules={rules.email}
                   required={false}
                   name='email'
                   label='Enter your username or email address'
@@ -61,7 +99,12 @@ const SignUpComponent = () => {
                   style={{ display: 'flex', justifyContent: 'space-between' }}
                 >
                   <div style={{ flex: 1, marginRight: '10px' }}>
-                    <Form.Item name='username' label='User name'>
+                    <Form.Item
+                      rules={rules.username}
+                      required={false}
+                      name='username'
+                      label='User name'
+                    >
                       <Input
                         placeholder='Username'
                         type='username'
@@ -70,12 +113,22 @@ const SignUpComponent = () => {
                     </Form.Item>
                   </div>
                   <div style={{ flex: 1, marginLeft: '10px' }}>
-                    <Form.Item name='number' label='Contact Number'>
+                    <Form.Item
+                      rules={rules.contactNumber}
+                      required={false}
+                      name='number'
+                      label='Contact Number'
+                    >
                       <Input placeholder='Number' type='' />
                     </Form.Item>
                   </div>
                 </div>
-                <Form.Item name='password' label='Enter your password'>
+                <Form.Item
+                  rules={rules.password}
+                  required={false}
+                  name='password'
+                  label='Enter your password'
+                >
                   <Input placeholder='Password' type='password' />
                 </Form.Item>
                 <div>

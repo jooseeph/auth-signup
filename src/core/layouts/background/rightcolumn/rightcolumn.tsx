@@ -9,6 +9,7 @@ function RightColumns(props: any) {
         <img
         style={{
           marginLeft: 200,
+          marginTop:144,
 
           height: '60%',
         }}

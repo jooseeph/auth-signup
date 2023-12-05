@@ -5,9 +5,7 @@ function LeftColumn(props: any) {
   return (
     <div className={leftColumn}>
       {props.logoVisible && (
-        <h1 style={{ margin: ' 30px 40px', color: '#C6553B' }}>
-          Your Logo
-        </h1>
+        <h1 style={{ margin: ' 30px 40px', color: '#C6553B' }}>Your Logo</h1>
       )}
 
       {props.vectorVisible && (
