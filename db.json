@@ -1,107 +1,16 @@
 {
   "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
       "email": "yusif.bayramov.yy@gmail.com",
       "password": "salam123",
-      "id": 2
+      "id": 1
     },
     {
-      "email": "sasa@sdds.com",
-      "password": "$2a$10$aE8kbIIN4rfVWDAy2JElM.M1uHlpkGY58/NwI.yyuX1Dk7TPUhVS6",
-      "username": "asasa",
-      "number": "122",
-      "id": 3
-    },
-    {
-      "email": "fsdsds@dssd.com",
-      "password": "$2a$10$owAYOSYX61eCdB9yKf.39eOGY83ouM/Fbg68BiL7Im.XxIENN7/iK",
+      "email": "yusif.bayramov.yy2@gmail.com",
       "username": "admin",
       "number": "12123",
-      "id": 4
-    },
-    {
-      "email": "asasdsd@dfdf.com",
-      "password": "$2a$10$EbLbNq1rKzS6HmER29.Vlevf95Jp6BI57yGsVUwPyjzShrnq4.YQ.",
-      "username": "sds",
-      "number": "1232",
-      "id": 5
-    },
-    {
-      "email": "test@asf.asf",
-      "password": "$2a$10$fRK1io92m0UI4Zg69SvRVeRhsYy7Sw6I0h3npmXzGc2C8J41.F3Ey",
-      "username": "test",
-      "number": "test2",
-      "id": 6
-    },
-    {
-      "email": "yusif.bayramov.dsasayy@gmail.com",
-      "username": "asasa",
-      "number": "saas",
-      "password": "saasaasaa",
-      "id": 7
-    },
-    {
-      "email": "sasa@sdds.com",
-      "password": "sdsdsdsd",
-      "id": 8
-    },
-    {
-      "email": "yusif.bayramov.yy@gmail.com",
-      "password": "asasmd",
-      "id": 9
-    },
-    {
-      "email": "",
-      "username": "",
-      "number": "",
-      "password": "",
-      "id": 10
-    },
-    {
-      "email": "",
-      "username": "",
-      "number": "",
-      "password": "",
-      "id": 11
-    },
-    {
-      "email": "yusif.bayramov.yy@gmail.com",
-      "username": "",
-      "number": "",
-      "password": "",
-      "id": 12
-    },
-    {
-      "email": "yusif.bayramov.yy@gmail.com",
-      "username": "dsds",
-      "number": "dssd",
-      "password": "sdsdsds",
-      "id": 13
-    },
-    {
-      "email": "dsjndsndndf@dddff.cpds",
-      "password": "sdsdsd",
-      "id": 14
-    },
-    {
-      "email": "yusif.basasayramov.yy@gmail.com",
-      "username": "sdsdds",
-      "number": "12123",
-      "password": "asasassa",
-      "id": 15
-    },
-    {
-      "email": "sdfsf@adsf",
-      "password": "dsfsf",
-      "id": 16
-    },
-    {
-      "id": 17
+      "password": "salam12313",
+      "id": 2
     }
   ],
   "comments": [

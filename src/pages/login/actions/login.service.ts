@@ -1,7 +1,6 @@
 import { API } from 'core/configs/api.config';
 import axiosInstance from 'core/configs/axios.config';
 import { ILoginFormValues } from '../login';
-import { error } from 'console';
 
 export const login = (
   credentials: ILoginFormValues
