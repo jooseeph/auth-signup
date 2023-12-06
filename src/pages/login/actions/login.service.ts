@@ -12,7 +12,7 @@ export const login = (credentials: ILoginFormValues): Promise<any> => {
           user.password === credentials.password
       );
 
-      return matchedUser && res.data;
+      return matchedUser;
     })
     .catch(error => {
       throw error;

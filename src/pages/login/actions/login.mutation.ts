@@ -14,8 +14,9 @@ export const useLogin = () => {
       return login(credentials);
     },
     onSuccess: response => {
-      console.log('Mutation Success:', response.token);
+      console.log('Mutation Success:', response);
       setToken('token');
+      console.log(response.email);
       store.dispatch(setUser(response.email));
       navigate(Routes.home);
     },
