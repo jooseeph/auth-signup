@@ -1,8 +1,8 @@
 import useLocalization from 'assets/lang';
 import { useLogin } from './actions/login.mutation';
 import { useLoginStyles } from './login.style';
-import { useCallback } from 'react';
-import { Button, Form, Input } from 'antd';
+import { useCallback, useMemo } from 'react';
+import { Button, Form, FormRule, Input } from 'antd';
 import { ILoginFormValues } from './login';
 import BackgroundComponent from 'core/layouts/background/background';
 import { Routes } from 'router/routes';
@@ -25,7 +25,27 @@ const LoginComponent = () => {
     [mutate]
   );
   const navigate = useNavigate();
-
+  const rules: { [key: string]: FormRule[] } = useMemo(
+    () => ({
+      email: [
+        {
+          required: true,
+          message: 'Iinput required',
+        },
+        {
+          pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+          message: 'Invalid email',
+        },
+      ],
+      password: [
+        {
+          required: true,
+          message: 'Password required',
+        },
+      ],
+    }),
+    []
+  );
   return (
     <>
       <BackgroundComponent
@@ -51,11 +71,18 @@ const LoginComponent = () => {
             >
               <Form.Item
                 name='email'
+                rules={rules.email}
+                required={false}
                 label='Enter your username or email address'
               >
                 <Input />
               </Form.Item>
-              <Form.Item name='password' label='Enter your Password'>
+              <Form.Item
+                rules={rules.password}
+                required={false}
+                name='password'
+                label='Enter your Password'
+              >
                 <Input type='password' />
               </Form.Item>
               <Form.Item wrapperCol={{ offset: 13, span: 16 }}>

@@ -16,7 +16,6 @@ export const useLogin = () => {
     onSuccess: response => {
       console.log('Mutation Success:', response.token);
       setToken('token');
-      console.log(response);
       store.dispatch(setUser(response.email));
       navigate(Routes.home);
     },

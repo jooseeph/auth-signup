@@ -13,6 +13,5 @@ export const store = configureStore({
 
 export const useStore = (key: keyof IState) => {
   const data = useSelector((state: IState) => state[key]);
-  console.log(data);
   return data;
 };
