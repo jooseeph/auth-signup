@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { Routes } from 'router/routes';
 
 const SignUpComponent = () => {
-  const { title, page, wrapper, button, subtitle, left, right } =
+  const { title, page, wrapper, button, subtitle, left, right, contact } =
     useSignupStyles();
   const { mutate, isLoading } = useRegister();
 
@@ -114,11 +114,12 @@ const SignUpComponent = () => {
                   </div>
                   <div style={{ flex: 1, marginLeft: '10px' }}>
                     <Form.Item
+                    
                       rules={rules.contactNumber}
                       required={false}
                       name='number'
-                      label='Contact Number'
-                    >
+                      label={<span style={{ width: '106px' }}>Contact Number</span>}
+                      >
                       <Input placeholder='Number' type='' />
                     </Form.Item>
                   </div>

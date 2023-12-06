@@ -11,6 +11,13 @@
       "number": "12123",
       "password": "salam12313",
       "id": 2
+    },
+    {
+      "email": "huseyn@gmail.com",
+      "username": "huseyn",
+      "number": "123",
+      "password": "huseyn123",
+      "id": 3
     }
   ],
   "comments": [

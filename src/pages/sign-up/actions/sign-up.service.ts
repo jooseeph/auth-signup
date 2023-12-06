@@ -5,7 +5,7 @@ import { IRegisterFormValues } from '../sign-up';
 
 export const signup = (
   credentials: IRegisterFormValues
-): Promise<{ token: string }> => {
+): Promise<{ token: any }> => {
   return axiosInstance
     .post(API.post, credentials)
     .then(res => {

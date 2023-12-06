@@ -14,13 +14,14 @@ export const useLogin = () => {
       return login(credentials);
     },
     onSuccess: response => {
-      console.log('Mutation Success:', response.token); 
+      console.log('Mutation Success:', response.token);
       setToken('token');
-      store.dispatch(setUser(response));
+      console.log(response);
+      store.dispatch(setUser(response.email));
       navigate(Routes.home);
     },
     onError: error => {
-      console.error('Mutation Error:', error); 
+      console.error('Mutation Error:', error);
     },
   });
 };

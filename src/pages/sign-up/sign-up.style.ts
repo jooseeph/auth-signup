@@ -18,7 +18,7 @@ const styles = {
   title: {
     fontSize: rem(55),
     lineHeight: 'normal',
-    marginBottom: rem(45),
+    marginBottom: rem(45),  
     [breakpoint(1200)]: {
       fontSize: rem(40),
     },
@@ -49,6 +49,11 @@ const styles = {
     backgroundColor: colors.btnBgColor,
     fontSize: rem(16),
   },
+  contact:{
+    [breakpoint(1200)]: {
+      maxWidth: rem(116),
+    },
+  }
 };
 
 export const useSignupStyles = createUseStyles(styles);
