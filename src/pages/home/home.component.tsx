@@ -7,7 +7,7 @@ import { Routes } from 'router/routes';
 import colors from 'assets/styles/abstracts/color';
 
 const HomeComponent = () => {
-  const { page, subtitle, title, button } = useHomeStyles();
+  const { page, title, button } = useHomeStyles();
   const user = useStore('user');
   const navigate = useNavigate();
 
@@ -16,7 +16,9 @@ const HomeComponent = () => {
       <BackgroundComponent>
         <div className={page}>
           <h4 className={title}>Welcome </h4>
-          <h2 style={{color:colors.btnBgColor}} className={title}>{user}</h2>
+          <h2 style={{ color: colors.btnBgColor }} className={title}>
+            {user}
+          </h2>
           <button
             className={button}
             onClick={() => {
